@@ -1,9 +1,15 @@
 import java.util.Random;
+import java.util.Scanner;
 
 public class HeadTailGame{
     public static void main(String args[]){
         int head=0, tail=0;
         Random rand = new Random();
+        Scanner sc = new Scanner(System.in);
+
+	    System.out.println("Who are you?");
+	    String name = sc.nextLine();
+	    System.out.println("Hello, " + name + "!");
 
          System.out.println("Tossing a coin...");
          for(int i=0; i<3; i++){
@@ -19,7 +25,7 @@ public class HeadTailGame{
             }
         }
         System.out.println("Heads: " + head + ", Tails: " + tail);
-        if(head >= 2) System.out.println("You won.");
-        else System.out.println("You lost.");
+        if(head >= 2) System.out.println(name + " won.");
+        else System.out.println(name + " lost.");
     }
 }
